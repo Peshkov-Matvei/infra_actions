@@ -64,7 +64,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull peshkmatvei/infra_actions
+            sudo docker pull Peshkov-Matvei/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 peshkmatvei/infra_actions 
+            sudo docker run --rm -d -p 5000:5000 Peshkov-Matvei/infra_actions 
