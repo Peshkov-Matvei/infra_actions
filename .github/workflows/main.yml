@@ -63,7 +63,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull peshk/infra_actions:latest
+            sudo docker pull peshkmatvei/infra_actions:latest
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 peshk/infra_actions:latest
+            sudo docker run --rm -d -p 5000:5000 peshkmatvei/infra_actions:latest
